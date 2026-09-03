@@ -1,0 +1,35 @@
+====================================================================================================================
+                                EXPERIMENT 1: AGGREGATE ANALYSIS (WITH MULTIPOP)                                   
+====================================================================================================================
+Op#  | Operation    | Param/Val  | Size   | Capacity   | Resize Occur     | Actual Cost  | Total Cost
+--------------------------------------------------------------------------------------------------------------------
+1    | PUSH         | 10         | 1      | 1          | NO               | 1            | 1         
+2    | PUSH         | 20         | 2      | 2          | YES (copied 1)   | 2            | 3         
+3    | PUSH         | 30         | 3      | 4          | YES (copied 2)   | 3            | 6         
+4    | PUSH         | 40         | 4      | 4          | NO               | 1            | 7         
+5    | PUSH         | 50         | 5      | 8          | YES (copied 4)   | 5            | 12        
+6    | PUSH         | 60         | 6      | 8          | NO               | 1            | 13        
+7    | PUSH         | 70         | 7      | 8          | NO               | 1            | 14        
+8    | PUSH         | 80         | 8      | 8          | NO               | 1            | 15        
+9    | MULTIPOP     | k=4 (pop 4) | 4      | 8          | NO               | 4            | 19        
+10   | PUSH         | 90         | 5      | 8          | NO               | 1            | 20        
+11   | PUSH         | 100        | 6      | 8          | NO               | 1            | 21        
+12   | MULTIPOP     | k=8 (pop 6) | 0      | 8          | NO               | 6            | 27        
+13   | POP          | EMPTY      | 0      | 8          | NO               | 0            | 27        
+14   | PUSH         | 110        | 1      | 8          | NO               | 1            | 28        
+====================================================================================================================
+
+=============================================== MATHEMATICAL ANALYSIS ===============================================
+Total Operations (n)       : 14
+Total Actual Cost (Sum C_i): 28
+Average / Amortized Cost   : Total Cost / n = 28 / 14 = 2.0000 ~ O(1)
+
+THEORETICAL PROOF WITH MULTIPOP:
+1. Each element can be pushed at most once (Cost = 1).
+2. Each element can be copied during resizing at most O(log n) times across geometric doublings (< 2n total copies).
+3. Each element can be popped (via POP or MULTIPOP) at most once throughout the entire sequence.
+   -> Total number of pops (single + multipop) <= Total number of pushes <= n.
+4. Total sequence cost T(n) <= (Push Cost) + (Resize Cost) + (Total Pop/Multipop Cost)
+                           <= n + 2n + n = 4n
+5. Amortized Cost per operation = T(n) / n <= 4n / n = 4 = O(1)
+=====================================================================================================================

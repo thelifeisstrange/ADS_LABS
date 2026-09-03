@@ -1,0 +1,92 @@
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Enter value to be inserted in stack
+successfully pushed 10 in the stack
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Enter value to be inserted in stack
+successfully pushed 20 in the stack
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Enter value to be inserted in stack
+successfully pushed 30 in the stack
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Stack Elements: 10 20 30 
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Top of stack is 30
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+30 popped from the stackStack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Stack Elements: 10 20 
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Enter number of values to be popped
+20 popped from the stack10 popped from the stackStack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Stack is empty
+Stack Operations
+Choose Options
+[1]Insert Element
+[2]Pop Element
+[3]MultiPop Elements
+[4]Peek
+[5]Display
+[6]Exit
+Exiting Program

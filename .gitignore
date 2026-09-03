@@ -1,0 +1,28 @@
+# Compiled C programs and object files
+*.o
+*.out
+a.out
+*.exe
+*.dSYM/
+
+# Common local binary names
+sample
+dynamicarray
+binarycounter
+btree
+quicksort
+mergesort
+heapsort
+stackusingarr
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

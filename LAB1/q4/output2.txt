@@ -1,0 +1,10 @@
+=======================================
+   SINGLE EXPONENTIAL MERGE SORT TEST  
+=======================================
+Target Size (n): 500000
+Generating 500000 random numbers...
+Sorting using Merge Sort...
+
+--- RESULT ---
+Successfully sorted 500000 elements.
+Time taken: 0.041468 seconds

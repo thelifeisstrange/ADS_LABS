@@ -14,6 +14,11 @@ quicksort
 mergesort
 heapsort
 stackusingarr
+stackusingll
+stackaggregate
+fibheap
+fibheap_decrease
+veb
 
 # macOS
 .DS_Store

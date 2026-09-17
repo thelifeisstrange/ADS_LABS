@@ -1,53 +1,56 @@
-# ADS Labs — Advanced Data Structures
+# ADS Labs — CSS 5101 Advanced Data Structures and Algorithms
 
-C implementations for Advanced Data Structures lab work: stacks, sorting, amortized analysis, and B-trees.
+C implementations for the ADS lab sets: stacks, sorting, amortized analysis, B-trees, Fibonacci heaps, and van Emde Boas trees.
 
 Each question lives in its own folder (`q1/`, `q2/`, …) under the lab directory (`LAB1/`, `LAB2/`, …).
 
-## Labs
-
-### Lab 1 — Stacks and sorting
+## Lab Set 1 — Stacks and sorting
 
 - `q1/` — Stack using an array (`stackusingarr.c`)
-- `q3/` — Quick sort (`quicksort.c`), target size `n = 500000`
-- `q4/` — Merge sort (`mergesort.c`), target size `n = 500000`
-- `q5/` — Heap sort (`heapsort.c`), target size `n = 500000`
+- `q2/` — Stack using a linked list (`stackusingll.c`)
+- `q3/` — Quick sort (`quicksort.c`), n = 500000
+- `q4/` — Merge sort (`mergesort.c`), n = 500000
+- `q5/` — Heap sort (`heapsort.c`), n = 500000
 
-Sample runs for Q3–Q5 are in each folder as `output.txt`, `output2.txt`, and `output3.txt`. Times vary slightly because the arrays are random.
+## Lab Set 2 — Amortized analysis
 
-### Lab 2 — Amortized analysis
+- `q1/` — Array stack with PUSH / POP / MULTIPOP; aggregate analysis (`stackaggregate.c`)
+- `q2/` — Binary counter increment using the accounting method (`binarycounter.c`)
 
-- `q1/` — Dynamic array with PUSH, POP, and MULTIPOP; aggregate analysis (`dynamicarray.c`), sample in `output.txt`
-- `q2/` — Binary counter increment using the accounting (credit) method (`binarycounter.c`), sample in `output.txt`
+## Lab Set 3 — B-trees
 
-### Lab 3 — B-trees
+- `q1/` — B-tree insert, search, delete (order t). Sample keys: 10 20 5 6 12 30 7 17; search 6; delete 6 (`btree.c`)
 
-- `q1/` — B-tree insert, search, delete, traversal, and level-wise print (`btree.c`); `output.txt` is `t = 3`, `output2.txt` is `t = 2`
+## Lab Set 4 — Fibonacci heaps and vEB trees
+
+- `q1/` — Insert, Find-Min, Union (`fibheap.c`)
+- `q2/` — Decrease-Key with cascading cuts, then Delete (`fibheap_decrease.c`)
+- `q3/` — van Emde Boas tree with U = 16 (`veb.c`)
 
 ## How to run
 
-Compile from a question folder with `gcc`:
-
 ```bash
 cd LAB2/q1
-gcc dynamicarray.c -o dynamicarray
-./dynamicarray
+gcc stackaggregate.c -o stackaggregate
+./stackaggregate
 ```
 
 | Lab | Question | Compile and run |
 | --- | --- | --- |
-| 1 | Q1 | `gcc stackusingarr.c -o stackusingarr && ./stackusingarr` |
-| 1 | Q3 | `gcc quicksort.c -o quicksort && ./quicksort` |
-| 1 | Q4 | `gcc mergesort.c -o mergesort && ./mergesort` |
-| 1 | Q5 | `gcc heapsort.c -o heapsort && ./heapsort` |
-| 2 | Q1 | `gcc dynamicarray.c -o dynamicarray && ./dynamicarray` |
-| 2 | Q2 | `gcc binarycounter.c -o binarycounter && ./binarycounter` |
+| 1 | Q1(a) | `gcc stackusingarr.c -o stackusingarr && ./stackusingarr` |
+| 1 | Q1(b) | `gcc stackusingll.c -o stackusingll && ./stackusingll` |
+| 1 | Quick / Merge / Heap | `gcc quicksort.c -o quicksort && ./quicksort` (same for merge/heap) |
+| 2 | Exp 1 | `gcc stackaggregate.c -o stackaggregate && ./stackaggregate` |
+| 2 | Exp 2 | `gcc binarycounter.c -o binarycounter && ./binarycounter` |
 | 3 | Q1 | `gcc btree.c -o btree && ./btree` |
+| 4 | Q1 | `gcc fibheap.c -o fibheap && ./fibheap` |
+| 4 | Q2 | `gcc fibheap_decrease.c -o fibheap_decrease && ./fibheap_decrease` |
+| 4 | Q3 | `gcc veb.c -o veb && ./veb` |
 
 Lab 3 Q1 prompts for the minimum degree `t` (use a value ≥ 2; invalid input defaults to 3).
 
 ## Notes
 
-- Compiled binaries (`*.o`, `a.out`, `*.out`) are gitignored. Rebuild them with `gcc` as shown above.
-- Lab 2 programs print operation tables and a short amortized-cost proof from a fixed sequence of operations.
-- Lab 3 Q1 uses a hardcoded insert sequence after you enter `t`.
+- Compiled binaries are gitignored. Rebuild them with `gcc` as shown above.
+- Lab 2 programs print operation tables and the amortized-cost argument.
+- Lab 4 Q2 first consolidates with Extract-Min so Decrease-Key can show cuts and cascading cuts.

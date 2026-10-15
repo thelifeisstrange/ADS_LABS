@@ -27,6 +27,15 @@ Each question lives in its own folder (`q1/`, `q2/`, …) under the lab director
 - `q2/` — Decrease-Key with cascading cuts, then Delete (`fibheap_decrease.c`)
 - `q3/` — van Emde Boas tree with U = 16 (`veb.c`)
 
+## Lab Set 5 — Shortest paths (Bellman-Ford, Floyd-Warshall)
+
+- `q1/` — Single-source shortest paths with negative edges (`bellmanford.c`)
+- `q2/` — All-pairs shortest paths (`floydwarshall.c`)
+
+## Lab Set 6 — Johnson's algorithm
+
+- `q1/` — All-pairs shortest paths on sparse graphs with reweighting (`johnson.c`)
+
 ## How to run
 
 ```bash
@@ -46,8 +55,13 @@ gcc stackaggregate.c -o stackaggregate
 | 4 | Q1 | `gcc fibheap.c -o fibheap && ./fibheap` |
 | 4 | Q2 | `gcc fibheap_decrease.c -o fibheap_decrease && ./fibheap_decrease` |
 | 4 | Q3 | `gcc veb.c -o veb && ./veb` |
+| 5 | Q1 | `gcc bellmanford.c -o bellmanford && ./bellmanford` |
+| 5 | Q2 | `gcc floydwarshall.c -o floydwarshall && ./floydwarshall` |
+| 6 | Q1 | `gcc johnson.c -o johnson && ./johnson` |
 
 Lab 3 Q1 prompts for the minimum degree `t` (use a value ≥ 2; invalid input defaults to 3).
+
+Lab 6 Q1 reads `V E` then `E` lines of `u v w` (0-based vertices; if any endpoint equals `V`, input is treated as 1-based and converted).
 
 ## Notes
 

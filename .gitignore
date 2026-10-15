@@ -1,11 +1,14 @@
 # Compiled C programs and object files
 *.o
+*.obj
 *.out
 a.out
+out
 *.exe
 *.dSYM/
+core
 
-# Common local binary names
+# Common local binary names (gcc -o <name>)
 sample
 dynamicarray
 binarycounter
@@ -19,6 +22,15 @@ stackaggregate
 fibheap
 fibheap_decrease
 veb
+bellmanford
+floydwarshall
+johnson
+
+# Lab 4 — gcc -o out or README target names
+LAB4/**/out
+LAB4/q1/fibheap
+LAB4/q2/fibheap_decrease
+LAB4/q3/veb
 
 # macOS
 .DS_Store

@@ -11,6 +11,7 @@ core
 # Common local binary names (gcc -o <name>)
 sample
 dynamicarray
+dynamictable
 binarycounter
 btree
 quicksort
@@ -18,19 +19,25 @@ mergesort
 heapsort
 stackusingarr
 stackusingll
-stackaggregate
 fibheap
 fibheap_decrease
 veb
 bellmanford
 floydwarshall
 johnson
+matmult_pthread
+mergesort_pthread
 
-# Lab 4 — gcc -o out or README target names
-LAB4/**/out
+# Lab build outputs (gcc -o out or README target names)
+LAB*/**/out
 LAB4/q1/fibheap
 LAB4/q2/fibheap_decrease
-LAB4/q3/veb
+LAB5/q1/veb
+LAB6/q1/bellmanford
+LAB7/q1/floydwarshall
+LAB8/q1/johnson
+LAB9/q1/matmult_pthread
+LAB9/q2/mergesort_pthread
 
 # macOS
 .DS_Store
